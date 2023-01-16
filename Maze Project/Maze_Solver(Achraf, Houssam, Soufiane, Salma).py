@@ -206,9 +206,9 @@ def solve_maze(file_path, start_tile="S", end_tile="E", step_tile=".", door_tile
             print(output + "\n")
             print(f"It takes {solution[0]} actions")
 
-            permission = input("Whould you like to print the maze? (could take some time) type 0 for yes and 1 for no: ")
+            permission = input("Whould you like to print the maze? (could take some time) type 1 for yes and 0 for no: ")
             while not (permission == "0" or permission == "1"):
-                permission = input("Whould you like to print the maze? (could take some time) type 0 for yes and 1 for no: ")
+                permission = input("Whould you like to print the maze? (could take some time) type 1 for yes and 0 for no: ")
             if permission == "1":
                 setup_maze(maze, solution[1])
                 while True:
