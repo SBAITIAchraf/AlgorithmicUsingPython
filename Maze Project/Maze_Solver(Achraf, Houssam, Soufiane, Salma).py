@@ -86,7 +86,7 @@ def solve_maze(file_path, start_tile="S", end_tile="E", step_tile=".", door_tile
         wn = turtle.Screen()
         wn.bgcolor("black")
         wn.title("maze")
-        wn.setup(1000, 1000)
+        wn.setup(800, 800)
 
         class Wall_Pen(turtle.Turtle):
             def __init__(self):
@@ -154,8 +154,8 @@ def solve_maze(file_path, start_tile="S", end_tile="E", step_tile=".", door_tile
         for y in range(len(my_maze)):
             for x in range(len(my_maze[y])):
                 character = my_maze[y][x]
-                screen_x = -450 + (x * 22)
-                screen_y = 450 - (y * 22)
+                screen_x = -360 + (x * 22)
+                screen_y = 360 - (y * 22)
                 if character == obs_tile:
                     wall_pen.goto(screen_x, screen_y)
                     wall_pen.stamp()
@@ -184,8 +184,8 @@ def solve_maze(file_path, start_tile="S", end_tile="E", step_tile=".", door_tile
         for node in my_path:
             y = node[0]
             x = node[1]
-            screen_x = -450 + (x * 22)
-            screen_y = 450 - (y * 22)
+            screen_x = -360 + (x * 22)
+            screen_y = 360 - (y * 22)
             turt_pen.goto(screen_x, screen_y)
             turt_pen.pendown()
             turt_pen.showturtle()
